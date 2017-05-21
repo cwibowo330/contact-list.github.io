@@ -39,7 +39,6 @@
 					phoneInfos[e].className = 'phone-info';
 					emailInfos[e].className += 'active';
 				}
-				switchInfo(selectItem.value);
 			} else if (selectItem.value == 'phone'){
 				for (var p = 0; p < phoneInfos.length; p++) {
 					emailInfos[p].className = 'email-info';
@@ -67,7 +66,6 @@
 					phoneInfos[e].classList.remove('active');
 					emailInfos[e].classList.add('active');
 				}
-				switchInfo(selectItem.value);
 			} else if (selectItem.value == 'phone'){
 				for (var p = 0; p < phoneInfos.length; p++) {
 					emailInfos[p].classList.remove('active');
