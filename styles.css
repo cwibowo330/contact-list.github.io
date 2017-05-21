@@ -1,0 +1,55 @@
+.border {
+  border: 2px solid #4c7db6;
+  border-radius: 6px 6px 6px 6px;
+  -moz-border-radius: 6px 6px 6px 6px;
+  -webkit-border-radius: 6px 6px 6px 6px;
+  font-family: Helvetica, Arial, sans-serif;
+  border-spacing: 0;
+  width: 300px;
+  margin: 30px; }
+  .border #heading {
+    background: #ebf0f9;
+    border-bottom: 1px solid #dfe3e8;
+    font-size: 20px; }
+  .border td, .border th {
+    padding: 10px;
+    text-align: left; }
+  .border th:last-child {
+    border-radius: 0 6px 0 0;
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0; }
+  .border tr {
+    vertical-align: top;
+    font-size: 15px;
+    position: relative; }
+    .border tr td:first-child, .border tr .bordered th:first-child {
+      border-left: medium none; }
+    .border tr span.info {
+      display: none; }
+    .border tr span.email-info, .border tr span.phone-info {
+      display: none; }
+    .border tr span.active {
+      display: block; }
+  .border .highlight {
+    border-top: 1px solid blue;
+    border-bottom: 1px solid blue;
+    background: #f2f2f2;
+    outline: thin solid #898989; }
+    .border .highlight td.name {
+      font-weight: bold; }
+    .border .highlight span.show {
+      display: block; }
+  .border #select {
+    text-align: right;
+    background: #fcfcfe;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #fcfcfe 0%, #ebf0f9 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #fcfcfe 0%, #ebf0f9 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #fcfcfe 0%, #ebf0f9 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfe', endColorstr='#ebf0f9',GradientType=0 );
+    /* IE6-9 */ }
+
+/*# sourceMappingURL=styles.css.map */
