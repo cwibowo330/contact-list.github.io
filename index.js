@@ -25,6 +25,7 @@
 			var parentItem;
 			allNames[i].attachEvent('onmouseenter', function(e){
 				parentItem = grabParentIE(e);
+				console.log(parentItem);
 				parentItem.className += 'highlight';
 			});
 			allNames[i].attachEvent('onmouseenter', function(e){
