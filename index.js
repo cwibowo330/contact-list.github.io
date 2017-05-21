@@ -38,12 +38,12 @@
 			if (selectItem.value == 'email') {
 				for (var e = 0; e < emailInfos.length; e++) {
 					phoneInfos[e].className = 'phone-info';
-					emailInfos[e].className += 'active';
+					emailInfos[e].className = 'email-info active';
 				}
 			} else if (selectItem.value == 'phone'){
 				for (var p = 0; p < phoneInfos.length; p++) {
 					emailInfos[p].className = 'email-info';
-					phoneInfos[p].className += 'active';
+					phoneInfos[p].className = 'phone-info active';
 				}
 			}
 		})
