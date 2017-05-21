@@ -10,6 +10,9 @@
 		console.log(e);
 		return e.target.parentNode;
 	}
+	function grabParentIE(e){
+		return e.srcElement.parentNode;
+	}
 
 	var allNames = changeIntoArr(document.querySelectorAll('td.name'))
 	var selectItem = document.querySelector('#preference');
@@ -21,7 +24,7 @@
 		for(var i = 0; i < allNames.length; i++) {
 			var parentItem;
 			allNames[i].attachEvent('onmouseenter', function(e){
-				parentItem = grabParent(e);
+				parentItem = grabParentIE(e);
 				parentItem.className += 'highlight';
 			});
 			allNames[i].attachEvent('onmouseenter', function(e){
