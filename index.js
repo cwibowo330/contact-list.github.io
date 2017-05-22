@@ -6,30 +6,20 @@
 		}
 		return newArr;
 	}
-	function grabParent(e){
-		console.log(e);
-		return e.target.parentNode;
-	}
-	function grabParentIE(e){
-		return e.srcElement.parentNode;
-	}
 
-	var allNames = changeIntoArr(document.querySelectorAll('td.name'))
+	var allNames = changeIntoArr(document.querySelectorAll('tr'))
 	var selectItem = document.querySelector('#preference');
 	var emailInfos = changeIntoArr(document.querySelectorAll('span.email-info'));
 	var phoneInfos = changeIntoArr(document.querySelectorAll('span.phone-info'));
-
+	// checks for IE
 	if(navigator.appVersion.indexOf("MSIE 7.")!=-1 || navigator.appVersion.indexOf("MSIE 8.") != -1 || navigator.appVersion.indexOf("MSIE 9.") != -1) {
 		// highlights selected name and displays info
 		for(var i = 0; i < allNames.length; i++) {
-			var parentItem;
 			allNames[i].attachEvent('onmouseenter', function(e){
-				parentItem = grabParentIE(e);
-				console.log(parentItem);
-				parentItem.className = 'highlight';
+				e.srcElement.className = 'highlight';
 			});
 			allNames[i].attachEvent('onmouseenter', function(e){
-				parentItem.className = '';
+				e.srcElement.className = '';
 			});
 		}
 
@@ -50,13 +40,11 @@
 	} else {
 		// highlights selected name and displays info
 		for(var i = 0; i < allNames.length; i++) {
-			var parentItem;
 			allNames[i].addEventListener('mouseenter', function(e){
-				parentItem = grabParent(e);
-				parentItem.classList.add('highlight');
+				e.target.classList.add('highlight');
 			});
 			allNames[i].addEventListener('mouseleave', function(e){
-				parentItem.classList.remove('highlight');
+				e.target.classList.remove('highlight');
 			});
 		}
 		

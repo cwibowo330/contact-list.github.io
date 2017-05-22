@@ -5,7 +5,7 @@
   -webkit-border-radius: 6px 6px 6px 6px;
   font-family: Helvetica, Arial, sans-serif;
   border-spacing: 0;
-  width: 300px;
+  width: 350px;
   margin: 30px; }
   .border #heading {
     background: #ebf0f9;
@@ -24,8 +24,16 @@
     position: relative; }
     .border tr td:first-child, .border tr .bordered th:first-child {
       border-left: medium none; }
-    .border tr span.info {
+    .border tr div.info {
       display: none; }
+      .border tr div.info img {
+        float: right;
+        vertical-align: top; }
+      .border tr div.info p {
+        float: left;
+        vertical-align: top;
+        padding: 0;
+        margin: 0; }
     .border tr span.email-info, .border tr span.phone-info {
       display: none; }
     .border tr span.active {
@@ -37,7 +45,7 @@
     outline: thin solid #898989; }
     .border .highlight td.name {
       font-weight: bold; }
-    .border .highlight span.show {
+    .border .highlight div.show {
       display: block; }
   .border #select {
     text-align: right;
